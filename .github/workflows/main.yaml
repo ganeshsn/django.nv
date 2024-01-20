@@ -58,6 +58,9 @@ jobs:
       - name: Install Node modules
         run: npm install
 
+      - name: Install Snyk
+        run: npm install snyk -g
+
       - name: Run Snyk
         run: snyk test --json > snyk-results.json
         env:
